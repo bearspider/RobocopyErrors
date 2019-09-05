@@ -25,7 +25,7 @@ namespace RobocopyErrors
     /// </summary>
     public partial class MainWindow : Window
     {
-        public Regex errorrx = new Regex(@"(?<date>\d\d\d\d\/\d\d\/\d\d\s\d\d:\d\d:\d\d)\s(?<error>ERROR\s\d+\s\(.*\))\s(?<operation>(.*))\s(?<path>\\\\yourservernamehere.*)", RegexOptions.Compiled);
+        public Regex errorrx = new Regex(@"(?<date>\d\d\d\d\/\d\d\/\d\d\s\d\d:\d\d:\d\d)\s(?<error>ERROR\s\d+\s\(.*\))\s(?<operation>(.*))\s(?<path>\\\\\w+.*)", RegexOptions.Compiled);
         public List<RobocopyError> errors = new List<RobocopyError>();
 
         public MainWindow()
